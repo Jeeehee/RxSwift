@@ -5,4 +5,4 @@
 
 |No.|Subject|Note|
 |---|---|---|
-|01|Why should we learn RxSwift?|RxSwift를 배워야 하는 이유|
+|01|[Why should we learn RxSwift?](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/01_WhyShouldWeLearnRxSwift.md)|RxSwift를 배워야 하는 이유|
