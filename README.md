@@ -6,3 +6,4 @@
 |No.|Subject|Note|
 |---|---|---|
 |01|[Why should we learn RxSwift?](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/01_WhyShouldWeLearnRxSwift.md)|RxSwift를 배워야 하는 이유|
+|02|[Observable](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/02_Observable.md)|- RxSwift의 핵심 Obsevable<br />- onNext, onCompleted, onError<br />- Obsevable 생성<br />- Dispose|
