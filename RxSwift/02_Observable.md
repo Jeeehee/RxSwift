@@ -2,8 +2,6 @@
 
 <br>
 
-## Obsevable 이란?
-
 - `Observable` == `Observable sequence` == `Sequence`
 - `Observer` 가 `Observable` 을 구독하는 형태로, 이벤트를 비동기적으로 생성하는 기능입니다.
 - `Subscribe` 메서드를 통해 `Observer` 와 `Observable` 을 연결합니다.
@@ -45,84 +43,6 @@ public enum Event<Element> {
 
 <br>
 
-## Observable 생성
-
-
-
-#### just
-
-- 오직 하나의 Element만 갖는 `Observable Sequence` 를 생성합니다.
-
-```swift
-let observable = Observable.just(1)
-```
-
-
-
-<br>
-
-
-
-#### of
-
-- 주어진 값들의 타입 추론을 통해 `Observable Sequence` 를 생성합니다.
-- 단일 Element 뿐만 아니라, 여러 Element들을 넣을 수 있습니다.
-
-```swift
-let observable1 = Observable.of([1, 2, 3])
-// Array로 넣게 되면, 타입은 Observable<[Int]>가 됩니다.
-
-observable1.subscribe { event in
-		if let element = event.element {
-				print(element)
-		}
-}
-// print [1, 2, 3]
-```
-
-```swift
-let observable2 = Observable.of(1, 2, 3)
-
-observable2.subscribe { event in
-    if let element = event.element {
-         print(element)
-    }
-}
-// print
-// 1
-// 2
-// 3
-```
-
-
-
-<br>
-
-
-
-#### From
-
-- 오직 Array 만 Element로 갖습니다.
-- Array 각 요소들을 하나씩 방출합니다.
-
-```swift
-let observable3 = Observable.from([1, 2, 3])
-
-observable3.subscribe { event in
-    if let element = event.element {
-        print(element)
-    }
-}
-// print
-// 1
-// 2
-// 3
-```
-
-
-
-<br>
-
 ## Dispose
 
 - **Dispose** : 처분할 수 있는, 사용 후 버릴 수 있는
@@ -150,16 +70,7 @@ Observable.of("A", "B", "C")
 
 
 
-#### ❓ 궁금증 
-
-1. **`Observable.of` 와 `Observable.from` 모두 Array를 인자로 받을 수 있는데, 이 둘의 차이가 무엇인가?**
-
-`Observarble.of([1, 2, 3])` 은 `[1, 2, 3]` 을 단일 Element로 갖지만,  
-`Observable.from([1, 2, 3])` 은 `[1]`, ` [2]`, ` [3]` 을 Element 갖습니다.
-
-
-
-2. **왜 구독을 해지해야 하는가?** 
+#### ❓ 왜 구독을 해지해야 하는가?
 
 Observer 은 기본적으로 Completed or Error 이벤트가 발생할 때까지 구독을 유지합니다.  
 완료되거나 에러가 발생 시, 해당 Observer를 해지 함으로써 메모리에서 제거해 메모리 릭을 방지합니다.
