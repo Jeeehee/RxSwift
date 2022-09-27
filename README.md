@@ -7,4 +7,5 @@
 |---|---|---|
 |01|[Why should we learn RxSwift?](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/01_WhyShouldWeLearnRxSwift.md)|RxSwift를 배워야 하는 이유|
 |02|[Observable](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/02_Observable.md)|- RxSwift의 핵심 Obsevable<br />- onNext, onCompleted, onError<br />- Dispose|
-|03|[Observable 생성 Operators](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/03_Operators.md)|Observable 생성 연산자|
+|03|[Observable 생성 Operators](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/03_Operators.md)|Observable 생성 연산자<br />- Just, Of, From, Create, Range, Empty, Never, Interval,  Timer, Deferred, Repeat|
+|04|[Subjects](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/04_Subjects.md)|- Observable + Observer = Subject<br />- PublishSubject, BehaviorSubject, RelaySubject, Behavior Relay|

@@ -6,7 +6,7 @@
 
 ## Observable 생성
 
-### 1. just
+### 1. Just
 
 - 오직 하나의 이벤트만 갖는 `Observable Sequence` 를 생성합니다.
 
@@ -16,7 +16,7 @@ let observable = Observable.just(1)
 
 <br>
 
-### 2. of
+### 2. Of
 
 - 단일 이벤트 뿐만 아니라 여러 이벤트를 넣을 수 있는 연산자로, 2개 이상의 이벤트를 전달해야 하는 경우에 쓰입니다.
 - 주어진 값들의 타입 추론을 통해 `Observable Sequence` 를 생성합니다.
