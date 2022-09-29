@@ -62,7 +62,7 @@ strikes.onCompleted()
 
 <br>
 
-## fliter()
+## filter()
 
 - 아래의 구현부에서 확인할 수 있듯, 기존의  `filter(_:)` 와 같이 Closure로 동작하여 **조건에 맞는 값만 필터링해 방출**합니다.
 
@@ -98,15 +98,6 @@ strikes.onCompleted()
 
 - 처음 발생하는 `skip(count: Int)` **count 만큼 이벤트 방출을 Skip** 합니다.
 - `첫 요소...count` 가 범위 입니다.
-- **BehaviorSubject** 을 **wraping** 하고, 현재 값을 `value` 를 통해 파악한 후 State로 보유합니다.
--  `Subject` 나 ` Observable` 이 아닌 `asObservable()` 를 통해, 새로운  `value` 를 갖을 수 있습니다.
-  - `onNext(_:) ` 사용 불가
-
-- 또한, Behavior Relay 은 Error가 발생하지 않을 것임을 보증합니다.
-  - `onError(_:) ` 도 사용 불가
-
-- 마지막으로, Behavior Relay 은 할당 해제 시 자동적으로 완료됩니다.
-  - `onCompleted(_:)` 도 사용 불가
 
 
 ```swift
