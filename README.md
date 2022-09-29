@@ -9,4 +9,4 @@
 |02|[Observable](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/02_Observable.md)|- RxSwift의 핵심 Obsevable<br />- onNext, onCompleted, onError<br />- Dispose|
 |03|[Observable 생성 Operators](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/03_Operators.md)|- Observable 생성 연산자<br />- Just, Of, From, Create, Range, Empty, Never, Interval,  Timer, Deferred, Repeat|
 |04|[Subjects](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/04_Subjects.md)|- Observable + Observer = Subject<br />- PublishSubject, BehaviorSubject, RelaySubject, Behavior Relay|
-|05|[Filtering Operators](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/05_Filtering Operators.md)|- 제약 조건을 적용해 처리하고자 하는 값만 방출<br />-  ignoreElements, element(at: ), fliter, skip(count:), skip(while:), skip(until:), take(count:), take(while:), take(until:), enumerated, distinctUntilChanged|
+|05|[FilteringOperators](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/05_Filtering Operators.md)|- 제약 조건을 적용해 처리하고자 하는 값만 방출<br />-  ignoreElements, element(at: ), fliter, skip(count:), skip(while:), skip(until:), take(count:), take(while:), take(until:), enumerated, distinctUntilChanged|
