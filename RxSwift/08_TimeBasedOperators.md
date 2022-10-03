@@ -223,7 +223,7 @@ Observable<Int>
 
 <br>
 
-## timeout
+## timeout(dueTime: , scheduler:)
 
 - **`dueTime` 시간 내에 이벤트가 방출되지 않는다면, Error를 방출**합니다. 
 - 쉽게 말해, 제한 시간 초과 시 Error가 방출됩니다.
