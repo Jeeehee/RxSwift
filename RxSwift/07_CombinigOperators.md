@@ -110,7 +110,7 @@ Observable
 
 ## merge(maxConcurrent:)
 
-- `maxConcurrent` 에 1을 넣으면, 들어온 순서를 보장해 출력됩니다.
+- `maxConcurrent` 에 1을 넣으면, **들어온 순서를 보장해 출력**됩니다.
 
 ```swift
 let favoriteThings = Observable<String>.of("산책", "크리스마스", "운전", "여행", "요리")
@@ -279,7 +279,7 @@ textField.onNext("이건 출력하지 않을거고,")
 textField.onNext("이건 출력할거에요")
 
 button.onNext(("🔫"))
-button.onNext(("🔫")) // 무시 됌
+button.onNext(("🔫")) // 무시 됨
 
 // Print
 // 이건 출력할거에요
@@ -320,7 +320,7 @@ button.onNext(())
 - Ambiguous 뜻 그대로 애매모호한 상황에 사용됩니다.
 - 타입이 동일한 두 개의 Observable 중, 먼저 방출되는 요소가 나타나면  
   다른 Observable에 대한 구독을 중단합니다.
-- 즉, 둘 중에 먼저 방출되는 Observable 만 살아남습니다.
+- 즉, **둘 중에 먼저 방출되는 Observable 만 살아남**습니다.
 
 ```swift
 let left = PublishSubject<String>()
@@ -332,7 +332,7 @@ observable
 	.subscribe(onNext: { print($0) })
 
 left.onNext("일") // 방출 시작
-right.onNext("1") // 무시 됌
+right.onNext("1") // 무시 됨
 left.onNext("이")
 left.onNext("삼")
 right.onNext("2")
@@ -358,17 +358,17 @@ source
 	.subscribe(onNext: { print($0) })
 
 source.onNext(one)
-two.onNext("1") // 무시 됌
+two.onNext("1") // 무시 됨
 one.onNext("2")
-three.onNext("3") // 무시 됌
+three.onNext("3") // 무시 됨
 
 source.onNext(two)
-one.onNext("5") // 무시 됌
+one.onNext("5") // 무시 됨
 two.onNext("4")
 
 source.onNext(three)
-two.onNext("6") // 무시 됌
-one.onNext("7") // 무시 됌
+two.onNext("6") // 무시 됨
+one.onNext("7") // 무시 됨
 three.onNext("8")
 
 // Print 2 4 8
@@ -378,7 +378,7 @@ three.onNext("8")
 
 ## reduce(_:, accumulator)
 
-- Swift의 reduce와 동일합니다.
+- Swift의 **reduce와 동일**합니다.
 - 제공된 초기 값부터 시작해, 값을 방출할 때마다 해당 값을 가공합니다.
 
 ```swift
@@ -416,4 +416,3 @@ Observable
 // 45
 // 55
 ```
-

@@ -4,12 +4,11 @@
 
 - Observable이 **방출하는 값을 변환(Transform)** 해주는 연산자 입니다.
 
-
 <br>
 
 ## toArray
 
-- Observable의 독립 요소들을 Array로 변환해줍니다.
+- Observable의 **독립 요소들을 Array로 변환**해줍니다.
 
 ```swift
 Observable
@@ -24,7 +23,7 @@ Observable
 
 ## map
 
-- Swift의 `map()` 과 동일합니다.
+- Swift의  **`map()` 과 동일**합니다.
 
 ```swift
 Observable
@@ -43,7 +42,7 @@ Observable
   -  `map()` 은 이벤트를 방출하지만 
   - `flatMap()` 은   `Observable` 을 방출합니다.
 
-- 여러개의 `Observable` 을 하나의 `Observable` 로 합쳐 방출합니다. (2차원 배열을 배열로 바꾸듯)
+- **여러개의 `Observable` 을 하나의 `Observable` 로 합쳐 방출**합니다. (2차원 배열을 배열로 바꾸듯)
 
 ```swift
 public func flatMap<Source: ObservableConvertibleType>(_ selector: @escaping (Element) throws -> Source) -> Observable<Source.Element> {
@@ -108,11 +107,11 @@ let jee2 = Student(score: BehaviorSubject(value: 300))
 student.onNext(jee)
 student.onNext(dori)
 
-jee.score.onNext(20) // dori가 들어왔기 때문에, 출력 안됌
+jee.score.onNext(20) // dori가 들어왔기 때문에, 출력 안됨
 dori.score.onNext(80)
 
 student.onNext(jee2)
-dori.score.onNext(30) // jee2가 들어왔기 때문에, 출력 안됌
+dori.score.onNext(30) // jee2가 들어왔기 때문에, 출력 안됨
 
 // print 100, 200, 80, 300
 ```
@@ -121,7 +120,7 @@ dori.score.onNext(30) // jee2가 들어왔기 때문에, 출력 안됌
 
 ## meterialize
 
-- 요소 뿐만 아니라, 요소를 갖고 있는 이벤트를 방출합니다.
+- 요소 뿐만 아니라, **요소를 갖고 있는 이벤트를 방출**합니다.
 
 ```swift
 Observable.of("A", "B", "C")
@@ -151,7 +150,7 @@ Observable
 
 ## dematerialize
 
-- `materialize()` 와 반대되는 개념으로, 요소를 포함한 이벤트를 다시 요소만 방출하도록 변경해줍니다.
+- `materialize()` 와 반대되는 개념으로, **요소를 포함한 이벤트를 다시 요소만 방출**하도록 변경해줍니다.
 
 ```swift
 Observable.of("A", "B", "C")
