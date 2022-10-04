@@ -6,11 +6,11 @@
 - RxCocoaSMS iOS(iPhone, iPad, Apple Watch, Apple TV), macOS 모두에 적용 가능합니다.
 - `ObserverType` 은 값을 주입하는 타입이고, `ObservableType` 은 값을 관찰할 수 있는 타입입니다.
 - 앱의 데이터 흐름을 단순화 하기 위해, RxCocoa에서의 바인딩은 단방향 데이터 스트림입니다.
-  - Producer(`ObserverType`)는 값을 만들어내고, Receiver( `ObservableType` )는 만들어진 값을 수신해 처리합니다.
+  - Producer(`ObserverType`)는 값을 만들어내고, Receiver(`ObservableType`)는 만들어진 값을 수신해 처리합니다.
   - 따라서, Receiver는 인터페이스나 Producer로 바인딩을 수행할 수 없습니다.
 
 
-![Group 1](/Users/jiheesmac/Downloads/Group 1.png)
+![Group 1](https://user-images.githubusercontent.com/92635121/193748281-7d4138d9-5832-4c09-a4d1-fa7e0c0f08ff.png)
 
 - `bind(to:)` 는 호출 시, 부수 작용이 없는 `subscribe()` 와 같습니다.
 
@@ -47,7 +47,6 @@ textField.rx.controlEvent(.editingDidEndOnExit)
 
 - Observable은 기본적으로 Backgound thread에서 동작합니다.
 - UI 작업 등 MainThread에서 작업해야할 때, Observable 대신 사용합니다. 
-- `.observe(on: MainScheduler.instance)` 를 `asDriver()` 로 단순화 합니다.
 
 ```swift
 public func asDriver() -> Driver<Element> {
