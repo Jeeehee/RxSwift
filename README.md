@@ -16,3 +16,4 @@
 |09|[RxCocoa](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/09_RxCocoa.md)|- 기존 Framework인 Cocoa touch에 Reactive의 장점을 더한, RxSwift를 기반으로 한 라이브러리 <br />- **Traits**<br />  `Control Property` , `ControlEvent` , `Driver`|
 |10|[Error Handling](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/10_ErrorHandling.md)|`Catch` , `Retry`|
 |11|[Relay](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/11_Relay.md)|`PublishRelay` , `BehaviorRelay`|
+|12|[Traits](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/12_Traits.md)|RxSwift Traits - `Single`, `Completable`, `Maybe`<br />RxCocoa Traits - `Driver`, `ControlProperty / ControlEvent`|
