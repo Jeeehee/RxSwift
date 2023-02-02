@@ -17,3 +17,4 @@
 |10|[Error Handling](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/10_ErrorHandling.md)|`Catch` , `Retry`|
 |11|[Relay](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/11_Relay.md)|`PublishRelay` , `BehaviorRelay`|
 |12|[Traits](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/12_Traits.md)|RxSwift Traits - `Single`, `Completable`, `Maybe`<br />RxCocoa Traits - `Driver`, `ControlProperty / ControlEvent`|
+|13|[WithUnretained](https://github.com/Jeeehee/RxSwift/blob/main/RxSwift/13_WithUnretained.md)|- WithUnretained<br />- subscribe(with: )|
